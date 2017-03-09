@@ -1,3 +1,12 @@
-.core-layout__viewport {
-  padding-top: 4rem;
+.amped-container{
+  display:flex; flex-direction:column; height:100%;
+}
+.amped-content-container{
+  display:flex; flex-direction:row;
+  .amped-sidebar{
+    flex:1; background:#efefef; height:100%; overflow:auto;
+  }
+  .amped-content{
+    flex:5; padding:30px;
+  }
 }
