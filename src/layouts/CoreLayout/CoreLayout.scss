@@ -2,9 +2,9 @@
   display:flex; flex-direction:column; height:100%;
 }
 .amped-content-container{
-  display:flex; flex-direction:row;
+  display:flex; flex-direction:row; height:100%; background:#F2F2F2;
   .amped-sidebar{
-    flex:1; background:#efefef; height:100%; overflow:auto;
+    flex:1; height:100%; overflow:auto;
   }
   .amped-content{
     flex:5; padding:30px;

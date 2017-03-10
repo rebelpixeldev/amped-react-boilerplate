@@ -1,5 +1,5 @@
 import React from 'react'
-import {Topbar, Sidebar} from 'amped/modules/Layout'
+import {Topbar, Sidebar} from 'amped/Layout'
 import './CoreLayout.scss'
 import '../../styles/core.scss'
 

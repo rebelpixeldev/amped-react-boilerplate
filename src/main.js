@@ -7,7 +7,13 @@ import AppContainer from './containers/AppContainer'
 // Material UI
 // ========================================================
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import { default as theme } from './theme';
+
+
+const muiTheme = getMuiTheme(theme);
+
 injectTapEventPlugin();
 
 // ========================================================
@@ -25,7 +31,7 @@ let render = () => {
   const routes = require('./routes/index').default(store)
 
   ReactDOM.render(
-	  <MuiThemeProvider>
+	  <MuiThemeProvider muiTheme={muiTheme}>
         <AppContainer store={store} routes={routes} />
       </MuiThemeProvider>,
     MOUNT_NODE
