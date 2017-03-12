@@ -4,19 +4,26 @@ import Home from './Home'
 import CounterRoute from './Counter'
 import {injectReducer} from '../store/reducers'
 import {default as AmpedCoreRoutes} from 'amped/Core/routes';
+import {default as AmpedAuthRoutes} from 'amped/Auth/routes';
 
 /*  Note: Instead of using JSX, we recommend using react-router
  PlainRoute objects to build route definitions.   */
 
-export const createRoutes = (store) => ({
-	path: '/',
-	component: CoreLayout,
-	indexRoute: Home,
-	childRoutes: [
-		CounterRoute(store),
-		...AmpedCoreRoutes(store, injectReducer)
-	]
-})
+
+export const createRoutes = (store) => (
+	{
+		path: '/',
+		component: CoreLayout,
+		indexRoute: Home,
+		childRoutes: [
+			CounterRoute(store),
+			...AmpedCoreRoutes(store, injectReducer),
+			...AmpedAuthRoutes(store, injectReducer)
+
+		]
+	}
+
+)
 
 /*  Note: childRoutes can be chunked or otherwise loaded programmatically
  using getChildRoutes with the following signature:
