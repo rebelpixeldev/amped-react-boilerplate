@@ -1,16 +1,15 @@
 import {combineReducers} from 'redux'
 import locationReducer from './location'
 
-import {default as AmpedSettings} from 'amped/core/reducers';
+import { ampedReducers } from 'amped/Core';
 
 // @TODO need to get settings and navigation from the api
-
 export const makeRootReducer = (asyncReducers) => {
 	return combineReducers({
 		location: locationReducer,
-		settings : AmpedSettings,
+		amped: ampedReducers,
 		...asyncReducers
-	})
+	});
 }
 
 export const injectReducer = (store, {key, reducer}) => {
