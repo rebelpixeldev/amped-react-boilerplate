@@ -16,7 +16,6 @@ export const createRoutes = (store) => (
 		component: CoreLayout,
 		indexRoute: Home,
 		childRoutes: [
-			CounterRoute(store),
 			...AmpedCoreRoutes(store, injectReducer),
 			...AmpedAuthRoutes(store, injectReducer)
 

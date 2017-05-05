@@ -178,7 +178,7 @@ webpackConfig.postcss = [
 	})
 ]
 
-// File loaders
+// Files loaders
 /* eslint-disable */
 webpackConfig.module.loaders.push(
 	{
