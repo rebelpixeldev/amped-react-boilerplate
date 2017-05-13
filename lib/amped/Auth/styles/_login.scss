@@ -1,7 +1,7 @@
 @import '../../Core/styles/variables';
 
 .amped-login-card{
-  .amped-form-container{margin-bottom:$grid-gutter-width; display:flex; flex-direction:column; align-items:flex-end}
+  .amped-form-container{margin:$grid-gutter-width 0; display:flex; flex-direction:column; align-items:flex-end}
   .amped-form--content{border-bottom:none; margin-bottom:0; padding-bottom:$grid-gutter-width/2; width:100%;}
 
   &--header{
@@ -9,7 +9,7 @@
     h1{margin:0; font-weight:normal}
   }
   &--external{
-    padding:$grid-gutter-width 0 $grid-gutter-width/2; display:flex; justify-content: space-between;
+    padding:$grid-gutter-width/2 0 0; display:flex; justify-content: space-between;
   }
 }
 
@@ -21,7 +21,7 @@
   }
 }
 
-.amped-login-button{
+  .amped-login-button{
   box-sizing: border-box; position: relative; margin: 0.2em; padding: 0 15px 0 46px; border: none; text-align: left; line-height: 34px; white-space: nowrap; border-radius: 0.2em; font-size: 16px; color: #FFF;
   &:before {
     content: ""; box-sizing: border-box; position: absolute; top: 0; left: 0; width: 34px; height: 100%;
