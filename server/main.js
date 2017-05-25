@@ -1,4 +1,6 @@
-const express = require('express')
+const
+    express = require('express'),
+    fs      = require('fs');
 const debug = require('debug')('app:server')
 const path = require('path')
 const webpack = require('webpack')
@@ -35,7 +37,7 @@ if (project.env === 'development') {
   // these files. This middleware doesn't need to be enabled outside
   // of development since this directory will be copied into ~/dist
   // when the application is compiled.
-  app.use(express.static(project.paths.public()))
+  app.use(express.static(project.paths.dist()))
 
   // This rewrites all routes requests to the root /index.html file
   // (ignoring file requests). If you want to implement universal
@@ -46,6 +48,12 @@ if (project.env === 'development') {
       if (err) {
         return next(err)
       }
+
+      // result.replace(/\{\{CONFIG\}\}/, {
+	   //    site : config.site,
+	   //    urls: config.urls
+      // })
+
       res.set('content-type', 'text/html')
       res.send(result)
       res.end()
@@ -63,7 +71,13 @@ if (project.env === 'development') {
   // Serving ~/dist by default. Ideally these files should be served by
   // the web server and not the app server, but this helps to demo the
   // server in production.
-  app.use(express.static(project.paths.dist()))
+
+	app.use(express.static(project.paths.dist()))
+
+    app.get('*', ( req, res, next ) => {
+      fs.createReadStream(path.join(project.paths.dist(), 'index.html'))
+          .pipe(res);
+    })
 }
 
 module.exports = app

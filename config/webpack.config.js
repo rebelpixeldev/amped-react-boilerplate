@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const project = require('./project.config')
 const debug = require('debug')('app:config:webpack')
+const config = require('./amped');
 
 const __DEV__ = project.globals.__DEV__
 const __PROD__ = project.globals.__PROD__
@@ -57,6 +58,9 @@ webpackConfig.externals['react/addons'] = true
 webpackConfig.plugins = [
 	new webpack.DefinePlugin(project.globals),
 	new HtmlWebpackPlugin({
+		data : {
+			config : JSON.stringify(config)
+		},
 		template: project.paths.client('index.html'),
 		hash: false,
 		favicon: project.paths.public('favicon.ico'),
