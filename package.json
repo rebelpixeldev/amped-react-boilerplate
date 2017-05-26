@@ -23,7 +23,7 @@
   },
   "betterScripts": {
     "compile": {
-      "command": "node bin/compile",
+      "command": "rm -rf ./dist && node bin/compile",
       "env": {
         "DEBUG": "app:*"
       }
