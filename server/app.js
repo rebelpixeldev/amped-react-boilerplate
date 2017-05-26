@@ -17,7 +17,6 @@ const server = http.createServer(app);
 app.use(compress())
 
 
-console.log(path.join(__dirname, '../dist'));
 app.use(express.static(path.join(__dirname, '../dist')));
 
 // This rewrites all routes requests to the root /index.html file
