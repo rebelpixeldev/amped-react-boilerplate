@@ -9,7 +9,12 @@ const config = {
 			protocol: 'http',
 			host: 'amped.rebelpixel.ca',
 			port: ''
-		}
+		},
+		socket: {
+			protocol: 'http',
+			host: 'api.amped.rebelpixel.ca',
+			port: ''
+		},
 	}
 }
 

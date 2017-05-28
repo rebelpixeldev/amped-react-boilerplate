@@ -13,39 +13,6 @@
   }
 }
 
-.amped-pagination{
-  ul{
-    list-style:none; margin-left:0; padding-left:0; display:flex; flex-direction:row;
-  }
-  li.active{
-    a{
-      background:rgb(103, 58, 183); color:#fff;
-    }
-  }
-  a{
-    padding:$grid-gutter-width/2; text-decoration:none;
-    border: 10px;
-    box-sizing: border-box;
-    display: block;
-    font-family: Roboto, sans-serif;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    cursor: pointer;
-    margin: 0px;
-    outline: none;
-    font-size: 16px;
-    font-weight: inherit;
-    position: relative;
-    z-index: 1;
-    color: rgb(33, 33, 33);
-    line-height: 16px;
-    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
-    background: none;
-    &:hover{
-      background:rgba(33,33,33,0.98); color:#fff;
-    }
-  }
-}
-
 .paper{
 
   &--depth-1{ box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px; }
