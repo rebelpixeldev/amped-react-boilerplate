@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux'
 
 import { default as FormComponent } from '../components/Form';
-import { Input, HiddenInput, Select, Json, Image, PasswordInput, Switch, DatePicker, Dropdown, CheckboxGroup, RadioButtonGroup } from 'amped/Form';
+import { Input, HiddenInput, Select, Json, Image, PasswordInput, Switch, DatePicker, Dropdown, CheckboxGroup, RadioButtonGroup, RichTextarea } from 'amped/Form';
 import { CrudService } from 'amped/Crud';
 import { AmpedService } from 'amped/Core';
 import { SET_VALUES, REMOVE_VALUES, UPDATE_FIELD } from '../actions';
@@ -10,7 +10,6 @@ import { SET_VALUES, REMOVE_VALUES, UPDATE_FIELD } from '../actions';
 import {GridList, GridTile} from 'material-ui/GridList';
 
 import '../styles/_form.scss';
-
 
 const mapStateToProps = (state) => ({
 	user : true,
@@ -257,6 +256,10 @@ export class Form extends React.Component{
 				height: function(field){
 					return field.options.length * 25 + 50;
 				}
+			},
+			textarea : {
+				component : RichTextarea,
+				height:400
 			}
 		}
 	}

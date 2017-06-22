@@ -8,6 +8,6 @@ export { default as DatePicker } from './components/DatePicker';
 export { default as Dropdown } from './components/Dropdown';
 export { default as CheckboxGroup } from './components/CheckboxGroup';
 export { default as RadioButtonGroup } from './components/RadioButtonGroup';
-export { default as RichTextarea } from './components/RichTextarea';
+export { default as RichTextarea } from './components/Textarea';
 
 export { Button, LoaderButton } from './components/Buttons';

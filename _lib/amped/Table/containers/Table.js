@@ -80,6 +80,7 @@ class AmpedTable extends React.Component{
 			});
 	}
 
+
 	handleDeleteItem(id){
 		id = parseInt(id);
 		this.setState({

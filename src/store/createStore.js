@@ -4,7 +4,7 @@ import {browserHistory} from 'react-router'
 import makeRootReducer from './reducers'
 import {updateLocation} from './location'
 
-import {AmpedSetup} from 'amped/Core';
+import {AmpedSetup} from 'amped-react-core/Core';
 
 export default (initialState = {}) => {
 	// ======================================================
