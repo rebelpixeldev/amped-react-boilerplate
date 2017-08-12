@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 export const PlainLayout = ({children}) => (
 	<div className='amped-container'>
