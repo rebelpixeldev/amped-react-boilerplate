@@ -1,16 +1,10 @@
 import React from 'react'
 import DuckImage from '../assets/Duck.jpg'
 
-<<<<<<< HEAD
 import { Form } from 'amped-react-core/Form';
-
+import { AmpedService } from 'amped-react-core/Core';
 import { AmpedCard } from 'amped-react-core/Common';
-=======
-import { Form } from 'amped/Form';
-import { AmpedService } from 'amped/Core';
-import { AmpedCard } from 'amped/Common';
-import { LineChart } from 'amped/Charts';
->>>>>>> 0acec3e66539f2c587e1a8ecd3c0e9d7591d1cca
+import { LineChart } from 'amped-react-core/Charts';
 
 import './HomeView.scss'
 
