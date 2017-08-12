@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux'
 import locationReducer from './location'
 
-import { ampedReducers } from 'amped/Core';
+import { ampedReducers } from 'amped-react-core/Core';
 
 // @TODO need to get settings and navigation from the api
 export const makeRootReducer = (asyncReducers) => {

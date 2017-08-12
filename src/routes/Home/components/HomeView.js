@@ -1,9 +1,9 @@
 import React from 'react'
 import DuckImage from '../assets/Duck.jpg'
 
-import { Form } from 'amped/Form';
+import { Form } from 'amped-react-core/Form';
 
-import { AmpedCard } from 'amped/Common';
+import { AmpedCard } from 'amped-react-core/Common';
 
 import './HomeView.scss'
 

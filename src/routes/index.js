@@ -3,8 +3,8 @@ import CoreLayout from '../layouts/CoreLayout'
 import Home from './Home'
 import CounterRoute from './Counter'
 import {injectReducer} from '../store/reducers'
-import {default as AmpedCoreRoutes} from 'amped/Core/routes';
-import {default as AmpedAuthRoutes} from 'amped/Auth/routes';
+import {default as AmpedCoreRoutes} from 'amped-react-core/Core/routes';
+import {default as AmpedAuthRoutes} from 'amped-react-core/Auth/routes';
 
 /*  Note: Instead of using JSX, we recommend using react-router
  PlainRoute objects to build route definitions.   */

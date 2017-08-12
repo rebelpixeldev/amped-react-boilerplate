@@ -1,6 +1,6 @@
 import React from 'react'
-import {Topbar, Sidebar} from 'amped/Layout'
-import { AmpedApp } from 'amped/Core';
+import {Topbar, Sidebar} from 'amped-react-core/Layout'
+import { AmpedApp } from 'amped-react-core/Core';
 import './CoreLayout.scss'
 import '../../styles/core.scss'
 
