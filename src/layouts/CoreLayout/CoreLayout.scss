@@ -3,9 +3,6 @@
 }
 .amped-content-container{
   display:flex; flex-direction:row; height:100%; background:#F2F2F2; min-height:calc(100vh - 64px);
-  .amped-sidebar{
-    flex:1; height:100%; overflow:auto;
-  }
   .amped-content{
     flex:5; padding:30px;
   }
