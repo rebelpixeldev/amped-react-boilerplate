@@ -36,6 +36,12 @@ Running `npm start` will startup the project by compiling the source and startin
     * `styles` - Some global styles for the project. *This will slowly be removed in favor of a BEM css strategy by putting all of the styles within each component*
     * `main.js` - This is the starting point for the app. It will setup the store and mount the initial component.
     * `theme.js` - The react version of the Amped Framework uses [material UI](http://www.material-ui.com) to style the basics of all components. theme.js is were you can customize the [primary colors](http://www.material-ui.com/#/customization/colors) of the site.
+
 ### Api
 
 If everything is setup with your frontend project, you'll need the api up and running before anything will display in your browser without javascript errors. See the [Amped api boilerplate project](https://github.com/rebelpixeldev/amped-api-boilerplate) for more info
+
+### Related Projects
+* [Amped react core](https://github.com/rebelpixeldev/amped-react-core)
+* [Amped api boilerplate](https://github.com/rebelpixeldev/amped-api-boilerplate)
+* [Amped api](https://github.com/rebelpixeldev/amped-api)
