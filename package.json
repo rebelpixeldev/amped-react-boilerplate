@@ -46,6 +46,7 @@
     "css-loader": "^0.26.0",
     "cssnano": "^3.7.4",
     "debug": "^2.2.0",
+    "express": "^4.15.4",
     "extract-text-webpack-plugin": "^1.0.0",
     "file-loader": "^0.9.0",
     "fs-extra": "^1.0.0",
@@ -85,6 +86,7 @@
   },
   "devDependencies": {
     "nodemon": "^1.10.2",
+    "redbox-react": "^1.5.0",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.12.2"
   }
