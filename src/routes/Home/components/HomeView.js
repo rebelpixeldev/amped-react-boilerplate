@@ -49,7 +49,7 @@ export class HomeView extends React.Component{
 				<AmpedCard title="Recent Activity">
 					<LineChart model="activity" dataKey={['created_at']} />
 				</AmpedCard>
-				<AmpedCard title="Form Components">
+				<AmpedCard title="Form Components Examples">
 					<Form name="formcomponents" data={formData}   />
 				</AmpedCard>
 			</div>
