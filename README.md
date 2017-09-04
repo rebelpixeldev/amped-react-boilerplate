@@ -34,13 +34,11 @@ Running `npm start` will startup the project by compiling the source and startin
 * `server` - Files that will run the the local dev server
 * `dist` - Not in the repo but is added when webpack compiles all of your files static files on your server should be served from here.
 * `src` - Here's where the fun starts! This is where you will code your project. The files that are in there to start are to show you one way of doing things but the skys the limit.
-    * `components` - Reuseable components for your project
-    * `containers` - The container for the reuseable components in your project
-    * `layouts` - Components and their styles that provide structure to the page. These are usually the page wrapper compenets that will hold and position things like header, sidebar and gloval elements.
-    * `routes` - The containers, components, styles and anything else that will be on specific pages of your app.
+    * `components` - Used as a grouping of similar components, you can think of all the directories in here as 'modules'. Within each module, there can be a components, containers, styles, routes and anything else that is specific to that module.
+    * `containers` - Currently just the main app component
     * `store` - The logic to setup your redux store. By default it will setup all of the routes in this boilerplate project and pull the routes from `lib/amped-react-core`. All of your custom routes and any other plugins you add into lib, you will need to add the routes to here manually.
-    * `styles` - Some global styles for the project. *This will slowly be removed in favor of a BEM css strategy by putting all of the styles within each component*
     * `main.js` - This is the starting point for the app. It will setup the store and mount the initial component.
+    * `routes.js` - The containers, components, styles and anything else that will be on specific pages of your app.
     * `theme.js` - The react version of the Amped Framework uses [material UI](http://www.material-ui.com) to style the basics of all components. theme.js is were you can customize the [primary colors](http://www.material-ui.com/#/customization/colors) of the site.
 
 ### Api
