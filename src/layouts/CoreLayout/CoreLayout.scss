@@ -1,9 +1,0 @@
-.amped-container{
-  display:flex; flex-direction:column; height:100%;
-}
-.amped-content-container{
-  display:flex; flex-direction:row; height:100%; background:#F2F2F2; min-height:calc(100vh - 64px);
-  .amped-content{
-    flex:5; padding:30px;
-  }
-}

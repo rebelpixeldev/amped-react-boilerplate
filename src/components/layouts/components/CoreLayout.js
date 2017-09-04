@@ -3,14 +3,16 @@ import {Topbar, Sidebar} from 'amped-react-core/Layout'
 import { AmpedApp } from 'amped-react-core/Core';
 import PropTypes from 'prop-types';
 
-import './CoreLayout.scss'
-import '../../styles/core.scss'
+export const CoreLayout = ({children}) => {
 
-export const CoreLayout = ({children}) => (
-	<AmpedApp>
-		{children}
-	</AmpedApp>
-)
+	const App = AmpedApp();
+
+	return (
+		<App>
+			{children}
+		</App>
+	)
+}
 
 CoreLayout.propTypes = {
 	children: PropTypes.element.isRequired
