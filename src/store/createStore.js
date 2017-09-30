@@ -1,17 +1,19 @@
-import {applyMiddleware, compose, createStore} from 'redux'
-import thunk from 'redux-thunk'
-import {browserHistory} from 'react-router'
 import makeRootReducer from './reducers'
 import {updateLocation} from './location'
 
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
+import { Provider } from 'react-redux'
+
+import createHistory from 'history/createBrowserHistory'
+import { Route } from 'react-router'
+
+import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
+
 import {AmpedSetup} from 'amped-react-core/Core';
 
-export default (initialState = {}) => {
-	// ======================================================
-	// Middleware Configuration
-	// ======================================================
-	const middleware = [thunk]
+export default (history, initialState = {}) => {
 
+	const middleware = routerMiddleware(history)
 	// ======================================================
 	// Store Enhancers
 	// ======================================================
@@ -31,18 +33,25 @@ export default (initialState = {}) => {
 	// ======================================================
 	const store = createStore(
 		makeRootReducer(),
-		initialState,
-		composeEnhancers(
-			applyMiddleware(...middleware),
-			...enhancers
-		)
-	);
+		applyMiddleware(middleware)
+	)
+
+
+	// const store = createStore(
+	//
+	// 	initialState,
+	// 	composeEnhancers(
+	// 		applyMiddleware(...middleware),
+	// 		...enhancers
+	// 	)
+	// );
+
 
 	AmpedSetup(store);
 	store.asyncReducers = {}
 
 	// To unsubscribe, invoke `store.unsubscribeHistory()` anytime
-	store.unsubscribeHistory = browserHistory.listen(updateLocation(store))
+	// store.unsubscribeHistory = browserHistory.listen(updateLocation(store))
 
 	if (module.hot) {
 		module.hot.accept('./reducers', () => {
